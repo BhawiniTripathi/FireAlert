@@ -38,7 +38,9 @@ import bolts.Task;
 
 import com.mbientlab.metawear.android.BtleService;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 
@@ -62,10 +64,11 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
 
         showTemp = (TextView) findViewById(R.id.TmpView);
         simpleSwitch = (Switch) findViewById(R.id.switch2);
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        //Alert Functionality
+       /* AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Temperature Is Too HIGH");
         alert = builder.create();
-        alert.setTitle("ALERT!!!!!!!!");
+        alert.setTitle("ALERT!!!!!!!!");*/
 
         findViewById(R.id.checkTempButton).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -155,8 +158,9 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
                         // TextView showTemp = (TextView) findViewById(R.id.TmpView);
                         //String x = "Temperature (C) = " + data.value(Float.class);
                         Log.i("firealert", "Temperature (C) = "+ data.value(Float.class).toString());
-                        showTemp.setText( "Temperature(In degree Celsius) = "+ data.value(Float.class).toString());
-                        if(data.value(Float.class)>24){
+                        String timeStamp = new SimpleDateFormat("dd-M-yyyy hh:mm:ss").format(Calendar.getInstance().getTime());
+                        showTemp.setText( timeStamp+ " Temperature(In degree Celsius) = "+ data.value(Float.class).toString());
+                        if(data.value(Float.class)>25){
 
                             //alert.show();
                             Log.i("firealert", "Alert!");
