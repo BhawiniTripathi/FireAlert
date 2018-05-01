@@ -35,3 +35,4 @@ As a **nosy visitor**, I want to **know the normal temperature inside the organi
 * Reminding users in the instruction sheet to keep their devices safely.
 
 ## High Level Design
+![image](https://user-images.githubusercontent.com/33559403/39484069-c69f61b6-4d31-11e8-9ab5-1f5797505187.png)
