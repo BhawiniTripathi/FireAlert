@@ -5,6 +5,8 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.IBinder;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -72,9 +74,10 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
         simpleSwitch = (Switch) findViewById(R.id.switch2);
         //Alert Functionality
         builder = new AlertDialog.Builder(this);
-        builder.setMessage("Temperature is too HIGH. Vacate the building!");
+        builder.setMessage("Temperature is too HIGH. Door security disabled. Vacate the building!");
         alert = builder.create();
         alert.setTitle("FIRE ALERT!!!");
+        alert.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#FFFCB9B7")));
 
 
         Activity curractivity = (Activity) this;
@@ -178,7 +181,7 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
                         //String x = "Temperature (C) = " + data.value(Float.class);
                         Log.i("firealert", "Temperature (C) = "+ data.value(Float.class).toString());
                         String timeStamp = new SimpleDateFormat("dd-M-yyyy hh:mm:ss").format(Calendar.getInstance().getTime());
-                        Log.i("firealert", "if cond: " +(data.value(Float.class)>25) );
+                        Log.i("firealert", "if cond: " +(data.value(Float.class)>24) );
                         Class[] args = new Class[1];
                         args[0] = String.class;
                         //Invoking function to display temperature
@@ -186,7 +189,7 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
                             Method settemp = activity.getClass().getMethod("setShowTemp",new Class[] { String.class });
 
                             try {
-                                settemp.invoke(activity, new String(timeStamp+ " Temperature(In degree Celsius) = "+ data.value(Float.class).toString()));
+                                settemp.invoke(activity, new String(timeStamp+ " Temperature = "+ data.value(Float.class).toString())+ " \u2103");
                             } catch (IllegalAccessException e) {
                                 e.printStackTrace();
                             } catch (InvocationTargetException e) {
@@ -198,7 +201,7 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
 
 //                        timeStamp+ " Temperature(In degree Celsius) = "+ data.value(Float.class).toString()
                         Log.i("firealert", "look no exeception");
-                        if(data.value(Float.class)>25){
+                        if(data.value(Float.class)>24){
 
                             //alert.show();
                             Log.i("firealert", "Alert!");
