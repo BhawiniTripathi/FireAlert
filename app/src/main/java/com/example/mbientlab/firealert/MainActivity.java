@@ -61,6 +61,8 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+      //  getSupportActionBar().setLogo(R.drawable.firealert_icon);
+      // getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         ///< Bind the service when the activity is created
         getApplicationContext().bindService(new Intent(this, BtleService.class),
@@ -176,7 +178,7 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
                         //String x = "Temperature (C) = " + data.value(Float.class);
                         Log.i("firealert", "Temperature (C) = "+ data.value(Float.class).toString());
                         String timeStamp = new SimpleDateFormat("dd-M-yyyy hh:mm:ss").format(Calendar.getInstance().getTime());
-                        Log.i("firealert", "if cond: " +(data.value(Float.class)>28) );
+                        Log.i("firealert", "if cond: " +(data.value(Float.class)>25) );
                         Class[] args = new Class[1];
                         args[0] = String.class;
                         //Invoking function to display temperature
@@ -196,7 +198,7 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
 
 //                        timeStamp+ " Temperature(In degree Celsius) = "+ data.value(Float.class).toString()
                         Log.i("firealert", "look no exeception");
-                        if(data.value(Float.class)>28){
+                        if(data.value(Float.class)>25){
 
                             //alert.show();
                             Log.i("firealert", "Alert!");

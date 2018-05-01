@@ -4,51 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#14dcaa"
     tools:context=".MainActivity">
 
 
     <TextView
         android:id="@+id/TmpView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textStyle="bold|italic"
+        android:layout_height="86dp"
         android:layout_marginBottom="210dp"
-        android:layout_marginTop="189dp"
+        android:layout_marginTop="100dp"
         android:text="TempDisplayed"
         app:layout_constraintBottom_toTopOf="@+id/switch2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-    </android.support.constraint.ConstraintLayout>
-
     <Button
         android:id="@+id/checkTempButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:text="CheckTemperture"
+        android:background="@drawable/buttonshape"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="44dp"
+        android:text="Check Temperture"
+        android:textColor="#EBFCFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TmpView" />
 
     <Switch
         android:id="@+id/switch2"
-        android:layout_width="182dp"
-        android:layout_height="46dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:layout_width="188dp"
+        android:layout_height="49dp"
         android:layout_marginBottom="66dp"
         android:checked="false"
-        android:text="DoorSecurity"
+        android:text="Door Security"
+        android:textStyle="bold|italic"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
