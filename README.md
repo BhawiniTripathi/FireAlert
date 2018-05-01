@@ -36,3 +36,29 @@ As a **nosy visitor**, I want to **know the normal temperature inside the organi
 
 ## High Level Design
 ![image](https://user-images.githubusercontent.com/33559403/39484069-c69f61b6-4d31-11e8-9ab5-1f5797505187.png)
+
+## Component List
+### Mobile Application
+The application connects with MetaWear C using bluetooth. Once the temperature exceeds the specified threshold, an alert is sent to the user.
+
+#### Temperature Display
+Displays the recently tracked temperature.
+
+#### Door Security Disabled Button
+Shows when the door security is disabled in case of an emergency.
+
+### MetaWear C API
+This allows to connect and transfer data between client(Mobile device) and server(MetaWear). The interfaces in the API capture data from temperature sensor. The data is streamed using Bluetooth Low Energy.
+
+#### NCP15XH103F03RC Temperature Thermistor
+This sensor captures temperature.
+
+## Security analysis
+|                    |                             |                                                                                                                                   |                                                                         | 
+|--------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------| 
+| Component Name     | Category of Vulnerability   | Issue Description                                                                                                                 | Mitigation                                                              | 
+| MetaWear           | Data Sniffing               | As data is transmitted through BLE channel, information can be extracted the from the BLE interface between device and smartphone | Encrypting the BLE channel.                                             | 
+|                    | Injecting malicious scripts | An attacker can inject malicious scripts using the BLE interface between device and smartphone                                    | Encrypting the BLE channel.                                             | 
+|                    | Data tampering              | Physically manipulating sensor components.                                                                                        | Physically securing the MetaWear device so that it is tamper proof.     | 
+| Mobile Application | Shoulder surfing            | Nosy-visitors might try to interfere to know information displayed on the application.                                            | User-awareness to ensure they keep their devices safely.                | 
+|                    | Phishing                    | Attacks through malicious advertisements, popups or alert                                                                         | User training to ensure they click on popups from trusted sources only. | 
