@@ -67,16 +67,16 @@ This sensor captures temperature.
 * Any MbientLab sensor capable of tracking temperature.
 * Android 4.3+ ( API 18+) with Bluetooth LE capable smart phone or tablet.
 * You will need the following things properly installed on your computer:
-* * Git
-* * Android Studio
+  * Git
+  * Android Studio
 
 
 ## Installation
 *	Clone this repository using git clone https://github.com/BhawiniTripathi/FireAlert.git
 *	Open this folder in Android Studio
 *	In Android Studio under the Build tab:
-* *	Click on Clean Project
-* * Click on Rebuild Project
+  *	Click on Clean Project
+  * Click on Rebuild Project
 *	Run the app on targeted Android device through ADB (Android Device Bridge)
 *	If you want to bypass the installation steps, you can also directly download the apk file here ( https://github.com/BhawiniTripathi/FireAlert/blob/master/FireAlert.apk) and run the application on your Android phone or computer
 
