@@ -20,6 +20,6 @@ As an **employee**, I want to **receive fire alerts** so I can **escape to safet
 * Indicate on the application (as a prototype) when the door security functionality is disabled.
 
 ## Presentation Slides
-
+[FireAlert_Milestone2_Presentation.pptx](https://github.com/BhawiniTripathi/FireAlert/files/1964666/FireAlert_Milestone2_Presentation.pptx)
 
 
