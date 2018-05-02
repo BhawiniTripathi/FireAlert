@@ -77,6 +77,7 @@ This sensor captures temperature.
 *	In Android Studio under the Build tab, click on Clean Project and then click on Rebuild Project.
 *	Run the app on targeted Android device through ADB (Android Device Bridge).
 *	If you want to bypass the installation steps, you can also [directly download the apk file here]( https://github.com/BhawiniTripathi/FireAlert/blob/master/FireAlert.apk) and run the application on your Android phone or computer.
+* For installing the .apk file directly, make sure that installing applications from places other than play store is turned on for your device.
 
 ## Getting Started
 * Connect your MetaWear device to the app using BLE.
