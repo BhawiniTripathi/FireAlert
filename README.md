@@ -80,6 +80,7 @@ This sensor captures temperature.
 * For installing the .apk file directly, make sure that installing applications from places other than play store is allowed on your device.
 
 ## Getting Started
+* Change the MAC address of the MetaWear device to that of your MetaWear device in "FireAlert/app/src/main/java/com/example/mbientlab/firealert/MainActivity.java". It is currently set to E1:52:2F:81:EC:BC.
 * Connect your MetaWear device to the app using BLE.
 * Click the Check Temperature button to check the temperature.
 * The application would pop up an alert whenever the tracked temperature is over a theshold.
