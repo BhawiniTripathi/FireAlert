@@ -47,7 +47,7 @@ Displays the recently tracked temperature.
 #### Door Security Disabled Button
 Shows when the door security is disabled in case of an emergency.
 
-### MetaWear C API
+### MetaWear API
 This allows to connect and transfer data between client(Mobile device) and server(MetaWear). The interfaces in the API capture data from temperature sensor. The data is streamed using Bluetooth Low Energy.
 
 #### NCP15XH103F03RC Temperature Thermistor
