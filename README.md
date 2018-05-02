@@ -74,12 +74,15 @@ This sensor captures temperature.
 ## Installation
 *	Clone this repository using git clone https://github.com/BhawiniTripathi/FireAlert.git
 *	Open this folder in Android Studio
-*	In Android Studio under the Build tab:
-   *	Click on Clean Project
-   * Click on Rebuild Project
+*	In Android Studio under the Build tab, click on Clean Project and then click on Rebuild Project.
 *	Run the app on targeted Android device through ADB (Android Device Bridge)
 *	If you want to bypass the installation steps, you can also [directly download the apk file here]( https://github.com/BhawiniTripathi/FireAlert/blob/master/FireAlert.apk) and run the application on your Android phone or computer
 
 ## Getting Started
+* Connect your MetaWear device to the app using BLE.
+* Click the Check Temperature button to check the temperature.
+* The application would pop up an alert whenever the tracked temperature is over a theshold.
+
+## Final Presentation Slides
 
 
