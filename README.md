@@ -84,5 +84,5 @@ This sensor captures temperature.
 * The application would pop up an alert whenever the tracked temperature is over a theshold.
 
 ## Final Presentation Slides
-
+[FireAlert_Milestone3_Presentation.pptx](https://github.com/BhawiniTripathi/FireAlert/files/1965800/FireAlert_Milestone3_Presentation.pptx)
 
